@@ -5,7 +5,7 @@
 /* Service imagery refinement */
 .service-card{padding:0;overflow:hidden;min-height:0;border-radius:5px}
 .service-photo{height:164px;position:relative;overflow:hidden;background:#dce3eb}
-.service-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,27,59,.38),transparent 62%)}
+
 .service-photo img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .45s ease}
 .service-card:hover .service-photo img{transform:scale(1.045)}
 
