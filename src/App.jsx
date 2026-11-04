@@ -8,15 +8,15 @@ const EMAIL = 'bntinstallation@gmail.com';
 const wa = (message = "Hi B.N.T DSTV Installers, I'd like to enquire about your services.") => `https://wa.me/27${PHONE.slice(1)}?text=${encodeURIComponent(message)}`;
 
 const services = [
-  { image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=900&q=80', icon: Satellite, title: 'New DStv installation', text: 'Professional satellite dish and decoder setup for homes and properties.' },
-  { image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=80', icon: Radio, title: 'Signal troubleshooting', text: 'Help diagnosing signal loss, reception interruptions and E48-32 errors.' },
-  { image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80', icon: Settings, title: 'Dish alignment', text: 'Dish positioning and realignment to help restore a stable signal.' },
-  { image: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=900&q=80', icon: Tv, title: 'Explora & decoder setup', text: 'Decoder installation, connection, configuration and basic troubleshooting.' },
-  { image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80', icon: Home, title: 'ExtraView & extra points', text: 'Multi-room viewing connections and additional viewing points.' },
-  { image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=900&q=80', icon: Wrench, title: 'TV wall mounting', text: 'TV bracket installation, secure mounting and neat cable arrangement.' },
-  { image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=80', icon: Cable, title: 'LNB & cabling assistance', text: 'Satellite cable checks, connection repairs and compatible LNB assistance.' },
-  { image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80', icon: Zap, title: 'Upgrades & reconnections', text: 'Assistance with compatible system upgrades, reconnections and equipment changes.' },
-  { image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80', icon: Building2, title: 'Residential & business setups', text: 'Satellite TV and television setup assistance for homes and business premises.' },
+  { image: 'https://images.surferseo.art/2d400ffb-ea86-4670-8669-a26b63a8b8c7.png', icon: Satellite, title: 'New DStv installation', text: 'Professional satellite dish and decoder setup for homes and properties.' },
+  { image: 'https://images.surferseo.art/325c2ce9-0218-4425-9d45-22a7391e7d2f.png', icon: Radio, title: 'Signal troubleshooting', text: 'Help diagnosing signal loss, reception interruptions and E48-32 errors.' },
+  { image: 'https://images.surferseo.art/325c2ce9-0218-4425-9d45-22a7391e7d2f.png', icon: Settings, title: 'Dish alignment', text: 'Dish positioning and realignment to help restore a stable signal.' },
+  { image: 'https://images.surferseo.art/3b0883c2-22de-4b96-b6b3-02e0c71bd39e.png', icon: Tv, title: 'Explora & decoder setup', text: 'Decoder installation, connection, configuration and basic troubleshooting.' },
+  { image: 'https://cdnimg.co/fdf62a4c-c14c-4562-8ff0-8e4269b8772e/126a7b3a-2d03-428c-974d-de6557cd18fe/how-to-connect-dstv-decoder-to-tv-decoder-connections.jpg', icon: Home, title: 'ExtraView & extra points', text: 'Multi-room viewing connections and additional viewing points.' },
+  { image: 'https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https%3A/assets.cdn.filesafe.space/Px9mRypHOLI3QQCnq19f/media/69c6d1445eea833b163f8d81.png', icon: Wrench, title: 'TV wall mounting', text: 'TV bracket installation, secure mounting and neat cable arrangement.' },
+  { image: 'https://cdnimg.co/fdf62a4c-c14c-4562-8ff0-8e4269b8772e/126a7b3a-2d03-428c-974d-de6557cd18fe/how-to-connect-dstv-decoder-to-tv-decoder-connections.jpg', icon: Cable, title: 'LNB & cabling assistance', text: 'Satellite cable checks, connection repairs and compatible LNB assistance.' },
+  { image: 'https://images.surferseo.art/3b0883c2-22de-4b96-b6b3-02e0c71bd39e.png', icon: Zap, title: 'Upgrades & reconnections', text: 'Assistance with compatible system upgrades, reconnections and equipment changes.' },
+  { image: 'https://images.surferseo.art/2d400ffb-ea86-4670-8669-a26b63a8b8c7.png', icon: Building2, title: 'Residential & business setups', text: 'Satellite TV and television setup assistance for homes and business premises.' },
 ];
 
 const areas = ['Walmer', 'Lorraine', 'Newton Park', 'Summerstrand', 'Mount Pleasant', 'Central', 'Mill Park', 'Kabega Park', 'Framesby', 'Kariega and surrounding areas'];
