@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Routes, Route, Link, NavLink, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, MessageCircle, ArrowUpRight, ArrowRight, Check, MapPin, Clock3, ShieldCheck, Wrench, Satellite, Tv, Radio, Cable, Settings, Home, Building2, Mail, ChevronDown, Zap } from 'lucide-react';
+import { Menu, X, Phone, MessageCircle, ArrowUpRight, ArrowRight, Check, MapPin, Clock3, ShieldCheck, Satellite, Mail } from 'lucide-react';
 
 const PHONE = '0681934255';
 const DISPLAY_PHONE = '068 193 4255';
@@ -8,15 +8,15 @@ const EMAIL = 'bntinstallation@gmail.com';
 const wa = (message = "Hi B.N.T DSTV Installers, I'd like to enquire about your services.") => `https://wa.me/27${PHONE.slice(1)}?text=${encodeURIComponent(message)}`;
 
 const services = [
-  { image: 'https://images.surferseo.art/2d400ffb-ea86-4670-8669-a26b63a8b8c7.png', icon: Satellite, title: 'New DStv installation', text: 'Professional satellite dish and decoder setup for homes and properties.' },
-  { image: 'https://images.surferseo.art/325c2ce9-0218-4425-9d45-22a7391e7d2f.png', icon: Radio, title: 'Signal troubleshooting', text: 'Help diagnosing signal loss, reception interruptions and E48-32 errors.' },
-  { image: 'https://images.surferseo.art/325c2ce9-0218-4425-9d45-22a7391e7d2f.png', icon: Settings, title: 'Dish alignment', text: 'Dish positioning and realignment to help restore a stable signal.' },
-  { image: 'https://images.surferseo.art/3b0883c2-22de-4b96-b6b3-02e0c71bd39e.png', icon: Tv, title: 'Explora & decoder setup', text: 'Decoder installation, connection, configuration and basic troubleshooting.' },
-  { image: 'https://cdnimg.co/fdf62a4c-c14c-4562-8ff0-8e4269b8772e/126a7b3a-2d03-428c-974d-de6557cd18fe/how-to-connect-dstv-decoder-to-tv-decoder-connections.jpg', icon: Home, title: 'ExtraView & extra points', text: 'Multi-room viewing connections and additional viewing points.' },
-  { image: 'https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https%3A/assets.cdn.filesafe.space/Px9mRypHOLI3QQCnq19f/media/69c6d1445eea833b163f8d81.png', icon: Wrench, title: 'TV wall mounting', text: 'TV bracket installation, secure mounting and neat cable arrangement.' },
-  { image: 'https://cdnimg.co/fdf62a4c-c14c-4562-8ff0-8e4269b8772e/126a7b3a-2d03-428c-974d-de6557cd18fe/how-to-connect-dstv-decoder-to-tv-decoder-connections.jpg', icon: Cable, title: 'LNB & cabling assistance', text: 'Satellite cable checks, connection repairs and compatible LNB assistance.' },
-  { image: 'https://images.surferseo.art/3b0883c2-22de-4b96-b6b3-02e0c71bd39e.png', icon: Zap, title: 'Upgrades & reconnections', text: 'Assistance with compatible system upgrades, reconnections and equipment changes.' },
-  { image: 'https://images.surferseo.art/2d400ffb-ea86-4670-8669-a26b63a8b8c7.png', icon: Building2, title: 'Residential & business setups', text: 'Satellite TV and television setup assistance for homes and business premises.' },
+  { image: 'https://images.surferseo.art/2d400ffb-ea86-4670-8669-a26b63a8b8c7.png', title: 'New DStv installation', text: 'Professional satellite dish and decoder setup for homes and properties.' },
+  { image: 'https://images.surferseo.art/325c2ce9-0218-4425-9d45-22a7391e7d2f.png', title: 'Signal troubleshooting', text: 'Help diagnosing signal loss, reception interruptions and E48-32 errors.' },
+  { image: 'https://images.surferseo.art/325c2ce9-0218-4425-9d45-22a7391e7d2f.png', title: 'Dish alignment', text: 'Dish positioning and realignment to help restore a stable signal.' },
+  { image: 'https://images.surferseo.art/3b0883c2-22de-4b96-b6b3-02e0c71bd39e.png', title: 'Explora & decoder setup', text: 'Decoder installation, connection, configuration and basic troubleshooting.' },
+  { image: 'https://cdnimg.co/fdf62a4c-c14c-4562-8ff0-8e4269b8772e/126a7b3a-2d03-428c-974d-de6557cd18fe/how-to-connect-dstv-decoder-to-tv-decoder-connections.jpg', title: 'ExtraView & extra points', text: 'Multi-room viewing connections and additional viewing points.' },
+  { image: 'https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https%3A/assets.cdn.filesafe.space/Px9mRypHOLI3QQCnq19f/media/69c6d1445eea833b163f8d81.png', title: 'TV wall mounting', text: 'TV bracket installation, secure mounting and neat cable arrangement.' },
+  { image: 'https://cdnimg.co/fdf62a4c-c14c-4562-8ff0-8e4269b8772e/126a7b3a-2d03-428c-974d-de6557cd18fe/how-to-connect-dstv-decoder-to-tv-decoder-connections.jpg', title: 'LNB & cabling assistance', text: 'Satellite cable checks, connection repairs and compatible LNB assistance.' },
+  { image: 'https://images.surferseo.art/3b0883c2-22de-4b96-b6b3-02e0c71bd39e.png', title: 'Upgrades & reconnections', text: 'Assistance with compatible system upgrades, reconnections and equipment changes.' },
+  { image: 'https://images.surferseo.art/2d400ffb-ea86-4670-8669-a26b63a8b8c7.png', title: 'Residential & business setups', text: 'Satellite TV and television setup assistance for homes and business premises.' },
 ];
 
 const areas = ['Walmer', 'Lorraine', 'Newton Park', 'Summerstrand', 'Mount Pleasant', 'Central', 'Mill Park', 'Kabega Park', 'Framesby', 'Kariega and surrounding areas'];
@@ -47,8 +47,7 @@ function Footer() {
 function FloatingWhatsApp() { return <a className="float-wa" href={wa()} aria-label="Chat with B.N.T on WhatsApp"><MessageCircle/><span>Chat to us</span></a>; }
 
 function ServiceCard({ item, index }) {
-  const Icon = item.icon;
-  return <article className="service-card"><div className="service-photo"><img src={item.image} alt={item.title} loading="lazy"/><span className="service-photo-icon"><Icon size={20}/></span></div><div className="service-card-body"><span className="service-number">0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p><a href={wa(`Hi B.N.T, I'm enquiring about ${item.title.toLowerCase()}.`)} className="text-link">Enquire about this <ArrowUpRight size={16}/></a></div></article>
+  return <article className="service-card"><div className="service-photo"><img src={item.image} alt={item.title} loading="lazy"/></div><div className="service-card-body"><span className="service-number">0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p><a href={wa(`Hi B.N.T, I'm enquiring about ${item.title.toLowerCase()}.`)} className="text-link">Enquire about this <ArrowUpRight size={16}/></a></div></article>
 }
 
 function HomePage() {
