@@ -8,15 +8,15 @@ const EMAIL = 'bntinstallation@gmail.com';
 const wa = (message = "Hi B.N.T DSTV Installers, I'd like to enquire about your services.") => `https://wa.me/27${PHONE.slice(1)}?text=${encodeURIComponent(message)}`;
 
 const services = [
-  { icon: Satellite, title: 'New DStv installation', text: 'Professional satellite dish and decoder setup for homes and properties.' },
-  { icon: Radio, title: 'Signal troubleshooting', text: 'Help diagnosing signal loss, reception interruptions and E48-32 errors.' },
-  { icon: Settings, title: 'Dish alignment', text: 'Dish positioning and realignment to help restore a stable signal.' },
-  { icon: Tv, title: 'Explora & decoder setup', text: 'Decoder installation, connection, configuration and basic troubleshooting.' },
-  { icon: Home, title: 'ExtraView & extra points', text: 'Multi-room viewing connections and additional viewing points.' },
-  { icon: Wrench, title: 'TV wall mounting', text: 'TV bracket installation, secure mounting and neat cable arrangement.' },
-  { icon: Cable, title: 'LNB & cabling assistance', text: 'Satellite cable checks, connection repairs and compatible LNB assistance.' },
-  { icon: Zap, title: 'Upgrades & reconnections', text: 'Assistance with compatible system upgrades, reconnections and equipment changes.' },
-  { icon: Building2, title: 'Residential & business setups', text: 'Satellite TV and television setup assistance for homes and business premises.' },
+  { image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=900&q=80', icon: Satellite, title: 'New DStv installation', text: 'Professional satellite dish and decoder setup for homes and properties.' },
+  { image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=80', icon: Radio, title: 'Signal troubleshooting', text: 'Help diagnosing signal loss, reception interruptions and E48-32 errors.' },
+  { image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80', icon: Settings, title: 'Dish alignment', text: 'Dish positioning and realignment to help restore a stable signal.' },
+  { image: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=900&q=80', icon: Tv, title: 'Explora & decoder setup', text: 'Decoder installation, connection, configuration and basic troubleshooting.' },
+  { image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80', icon: Home, title: 'ExtraView & extra points', text: 'Multi-room viewing connections and additional viewing points.' },
+  { image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=900&q=80', icon: Wrench, title: 'TV wall mounting', text: 'TV bracket installation, secure mounting and neat cable arrangement.' },
+  { image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=80', icon: Cable, title: 'LNB & cabling assistance', text: 'Satellite cable checks, connection repairs and compatible LNB assistance.' },
+  { image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80', icon: Zap, title: 'Upgrades & reconnections', text: 'Assistance with compatible system upgrades, reconnections and equipment changes.' },
+  { image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80', icon: Building2, title: 'Residential & business setups', text: 'Satellite TV and television setup assistance for homes and business premises.' },
 ];
 
 const areas = ['Walmer', 'Lorraine', 'Newton Park', 'Summerstrand', 'Mount Pleasant', 'Central', 'Mill Park', 'Kabega Park', 'Framesby', 'Kariega and surrounding areas'];
@@ -48,7 +48,7 @@ function FloatingWhatsApp() { return <a className="float-wa" href={wa()} aria-la
 
 function ServiceCard({ item, index }) {
   const Icon = item.icon;
-  return <article className="service-card"><div className="service-icon"><Icon size={23}/></div><span className="service-number">0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p><a href={wa(`Hi B.N.T, I'm enquiring about ${item.title.toLowerCase()}.`)} className="text-link">Enquire about this <ArrowUpRight size={16}/></a></article>;
+  return <article className="service-card"><div className="service-photo"><img src={item.image} alt={item.title} loading="lazy"/><span className="service-photo-icon"><Icon size={20}/></span></div><div className="service-card-body"><span className="service-number">0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p><a href={wa(`Hi B.N.T, I'm enquiring about ${item.title.toLowerCase()}.`)} className="text-link">Enquire about this <ArrowUpRight size={16}/></a></div></article>
 }
 
 function HomePage() {
