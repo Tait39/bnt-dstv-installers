@@ -8,7 +8,7 @@
 .service-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,27,59,.38),transparent 62%)}
 .service-photo img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .45s ease}
 .service-card:hover .service-photo img{transform:scale(1.045)}
-.service-photo-icon{position:absolute;z-index:1;left:17px;bottom:14px;width:39px;height:39px;display:grid;place-items:center;background:var(--yellow);color:var(--navy);border-radius:4px;box-shadow:0 4px 15px #0002}
+
 .service-card-body{position:relative;padding:19px 21px 21px}
 .service-card-body .service-number{top:21px;right:20px}
 .service-card-body h3{margin:0 0 8px;padding-right:35px}
